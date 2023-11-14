@@ -53,7 +53,7 @@ const AdventuresComponent = () => {
     <Box bg="orange.100" borderRadius={10} py="12" mb={10}>
       <Container maxW="container.xl">
         <Box textAlign="center" mb="10">
-          <Heading as="h2" size="xl" color="primary.500" mb="4">
+          <Heading as="h2" size="xl" color="headingColor" mb="4">
             Explore Our Adventures
           </Heading>
           <Text fontSize="lg" color="gray.600">

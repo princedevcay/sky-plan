@@ -8,7 +8,6 @@ const CategoryCard = ({ title, imageUrl }) => {
       rounded="lg"
       overflow="hidden"
       bg="white"
-      m={"4"}
       mb={4}
       _hover={{ transform: 'scale(1.05)', transition: 'transform 0.2s' }} // Adds a hover effect
     >

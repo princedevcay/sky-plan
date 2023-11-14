@@ -18,6 +18,7 @@ const Home = () => {
       <Hero />
       <SearchForm />
       <Box px={10} py={20}>
+      <TopDeals />
       <CategoriesSection />
       <AdventuresComponent />
       <Benefits />
