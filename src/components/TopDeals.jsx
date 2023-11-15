@@ -12,7 +12,7 @@ import {
   Grid,
   GridItem
 } from '@chakra-ui/react';
-import { FaMapMarker, FaStar, FaRegStar, FaStarHalfAlt, FaCalendar  } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaStar, FaRegStar, FaStarHalfAlt, FaCalendarAlt  } from 'react-icons/fa';
 
 const mockTopDeals = [
     {
@@ -98,7 +98,7 @@ const TopDealCard = ({ deal }) => {
     <Box borderWidth="1px" borderRadius="lg" overflow="hidden" boxShadow="2xl" bg={cardBg}>
       <Box position="relative">
         <Image src={deal.imageUrl} alt={deal.title} objectFit="cover" width="100%" h={"150px"}/>
-        <Box position="absolute" top="2" left="2" zIndex="overlay">
+        <Box position="absolute" top="2" left="2" zIndex="1">
           {deal.savings && <Badge bgColor="headingColor" p={1} color="white">Savings</Badge>}
           {deal.popular && <Badge bgColor="headingColor" p={1} color={"white"} ml={2}>Popular</Badge>}
         </Box>
@@ -107,9 +107,9 @@ const TopDealCard = ({ deal }) => {
         <RatingStars rating={deal.rating} />
         <Text fontWeight="bold">{deal.title}</Text>
         <Stack direction="row" align="center">
-          <Icon as={FaCalendar} />
-          <Text>{deal.days}</Text>
-          <Icon as={FaMapMarker} />
+          <Icon as={FaCalendarAlt} />
+          <Text>{deal.days} days</Text>
+          <Icon as={FaMapMarkerAlt} />
           <Text>{deal.location}</Text>
         </Stack>
         <Text noOfLines={2} textAlign="center">{deal.description}</Text>

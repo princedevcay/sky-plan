@@ -1,19 +1,15 @@
-// FooterComponent.js
+// FooterComponent.jsx
 import React from 'react';
 import {
   Box,
-  Container,
   Grid,
-  GridItem,
-  Heading,
-  List,
-  ListItem,
+  VStack,
   Text,
-  Link,
   Icon,
-  Stack,
-  Divider,
-  useColorModeValue
+  HStack,
+  Link,
+  Container,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaCcVisa, FaCcMastercard, FaCcAmex } from 'react-icons/fa';
 
@@ -25,58 +21,46 @@ const Footer = () => {
   return (
     <Box bg={bgColor} color={textColor} py="5">
       <Container maxW="container.xl">
-        <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' }} gap={10}>
-          {/* Support Contact Info */}
-          <GridItem>
-            <Heading as="h4" size="md" mb="2">Support</Heading>
-            <List>
-              <ListItem><Text>+(233) 123 456 789</Text></ListItem>
-              <ListItem><Text>info@skyplantravelconsult.com</Text></ListItem>
+        <Grid
+          templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' }}
+          gap={10}
+          textAlign={{ base: 'left', md: 'left' }} // Center text for base, align left for md and up
+        >
+          <VStack spacing={2}>
+            <Text fontWeight="bold">Support</Text>
+            <Text>+233 123 456 789</Text>
+            <Text>info@skyplanttravelconsult.com</Text>
+          </VStack>
 
-              {/* ... other items */}
-            </List>
-          </GridItem>
+          <VStack spacing={2}>
+            <Text fontWeight="bold">Follow Us</Text>
+            <HStack justifyContent={{ base: 'center', md: 'flex-start' }}>
+              <Icon as={FaFacebook} w={5} h={5} />
+              <Icon as={FaTwitter} w={5} h={5} />
+              <Icon as={FaInstagram} w={5} h={5} />
+              <Icon as={FaYoutube} w={5} h={5} />
+            </HStack>
+          </VStack>
 
-          {/* Follow Us */}
-          <GridItem>
-            <Heading as="h4" size="md" mb="2">Follow Us</Heading>
-            <Stack direction="row" spacing="4">
-              <Icon as={FaFacebook} w={6} h={6} />
-              <Icon as={FaTwitter} w={6} h={6} />
-              <Icon as={FaInstagram} w={6} h={6} />
-              <Icon as={FaYoutube} w={6} h={6} />
-              {/* ... other icons */}
-            </Stack>
-          </GridItem>
+          <VStack spacing={2}>
+            <Text fontWeight="bold">Payment Options</Text>
+            <HStack justifyContent={{ base: 'center', md: 'flex-start' }}>
+              <Icon as={FaCcVisa} w={5} h={5} />
+              <Icon as={FaCcMastercard} w={5} h={5} />
+              <Icon as={FaCcAmex} w={5} h={5} />
+            </HStack>
+          </VStack>
 
-          {/* Payment Options */}
-          <GridItem>
-            <Heading as="h4" size="md" mb="2">Payment Options</Heading>
-            <Stack direction="row" spacing="4">
-              <Icon as={FaCcVisa} w={8} h={8} />
-              <Icon as={FaCcMastercard} w={8} h={8} />
-              <Icon as={FaCcAmex} w={8} h={8} />
-              {/* ... other payment icons */}
-            </Stack>
-          </GridItem>
-
-          {/* Legal Links */}
-          <GridItem>
-            <Heading as="h4" size="md" mb="2">Menu</Heading>
-            <List>
-              <ListItem><Link href="#">Legal Notice</Link></ListItem>
-              <ListItem><Link href="#">Privacy Policy</Link></ListItem>
-              <ListItem><Link href="#">Cookies</Link></ListItem>
-              <ListItem><Link href="#">Terms & Conditions</Link></ListItem>
-            </List>
-          </GridItem>
+          <VStack spacing={2}>
+            <Text fontWeight="bold">Menu</Text>
+            <Link>Legal Notice</Link>
+            <Link>Privacy Policy</Link>
+            <Link>Cookies</Link>
+            <Link>Terms & Conditions</Link>
+          </VStack>
         </Grid>
-
-        <Divider my="5" />
-
-        {/* Copyright Info */}
-        <Text textAlign="center" fontSize="sm">
-          © {currentYear} Skyplantravelconsult. All rights reserved.
+        <Text pt="5" textAlign="center" fontSize="sm">
+          © {currentYear} SkyPlant Travel Consults. All rights reserved.
         </Text>
       </Container>
     </Box>
