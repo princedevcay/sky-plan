@@ -23,10 +23,10 @@ const MobileNav = ({ isOpen, onClose }) => {
             <Link href="/" textTransform="uppercase">Home</Link>
             <Link href="/about" textTransform="uppercase">About</Link>
             <Link href="/services" textTransform="uppercase">Services</Link>
-            <Button colorScheme="red" w="100%">
+            <Button colorScheme="green" w="100%">
               Sign In
             </Button>
-            <Button variant="outline" colorScheme="red" w="100%">
+            <Button variant="outline" colorScheme="green" w="100%">
               Sign Up
             </Button>
           </VStack>

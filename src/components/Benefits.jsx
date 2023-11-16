@@ -43,7 +43,7 @@ const Benefits = () => {
           Discover the unique benefits of planning your trip with us.
           </Heading>
       </Box>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10} color={"green"}>
         {benefits.map((benefit, index) => (
           <BenefitItem
             key={index}

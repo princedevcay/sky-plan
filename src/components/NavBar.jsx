@@ -3,9 +3,9 @@ import { ChevronDownIcon } from '@chakra-ui/icons';
 
 const NavBar = () => {
   return (
-    <Flex alignItems="center">
+    <Flex alignItems="center" color={"white"}>
       <Box mx={3}>
-        <Link href="/" textTransform="uppercase">Home</Link>
+        <Link href="/" color="white" textTransform="uppercase">Home</Link>
       </Box>
       <Box mx={3}>
         <Link href="/about" textTransform="uppercase">About</Link>
@@ -13,10 +13,10 @@ const NavBar = () => {
       
       {/* Sub-menu example */}
       <Menu> 
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />} textTransform="uppercase">
+        <MenuButton as={Button} rightIcon={<ChevronDownIcon />} textTransform="uppercase" colorScheme={"white"} bgColor={"transparent"}>
           Services
         </MenuButton>
-        <MenuList textTransform="uppercase">
+        <MenuList textTransform="uppercase" color={"black"}>
           <MenuItem textTransform="uppercase">Service 1</MenuItem>
           <MenuItem textTransform="uppercase">Service 2</MenuItem>
           <MenuItem textTransform="uppercase">Service 3</MenuItem>

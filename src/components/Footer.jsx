@@ -15,7 +15,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaCcVisa, FaCcMastercard
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const bgColor = useColorModeValue('gray.100', 'gray.900');
+  const bgColor = useColorModeValue('green.100', 'gray.900');
   const textColor = useColorModeValue('gray.600', 'gray.200');
 
   return (

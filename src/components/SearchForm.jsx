@@ -43,13 +43,13 @@ const SearchForm = () => {
       >
         <InputGroup>
           <InputLeftElement pointerEvents="none">
-            <Icon as={FaMapMarkerAlt} color="red.500" />
+            <Icon as={FaMapMarkerAlt} color="green.500" />
           </InputLeftElement>
           <Input type="text" placeholder="Where to?" />
         </InputGroup>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
-            <Icon as={FaCalendarAlt} color="red.500" />
+            <Icon as={FaCalendarAlt} color="green.500" />
           </InputLeftElement>
           <DatePicker
             selected={startDate}

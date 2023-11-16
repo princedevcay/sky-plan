@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Text, FormControl, FormLabel, Input, Textarea, Butt
 
 const ContactUs = () => {
   return (
-    <Box bg="" color="black" p={10} mt={10}>
+    <Box bg="grey.100" color="black" p={10} mt={10}>
       <Flex wrap="wrap" mx="-2" alignItems="center" justifyContent="center">
         {/* Contact Text */}
         <Box p={2} flex={[1, 1, 1 / 2]}>
@@ -27,7 +27,7 @@ const ContactUs = () => {
             <FormLabel>Message</FormLabel>
             <Textarea mb={3} placeholder="Your Message" />
 
-            <Button colorScheme="red" type="submit">Send Message</Button>
+            <Button colorScheme="green" type="submit">Send Message</Button>
           </FormControl>
         </Box>
       </Flex>

@@ -19,7 +19,7 @@ const AdventureCard = ({ adventure }) => {
         height="200px"
       />
       <Box p="6">
-        <Heading as="h3" size="lg" mb="2" color="primary.500">
+        <Heading as="h3" size="lg" mb="2" color="headingColor">
           {adventure.type}
         </Heading>
         <Text fontSize="md" color="gray.600">
@@ -50,13 +50,13 @@ const AdventuresComponent = () => {
   ];
 
   return (
-    <Box bg="orange.100" borderRadius={10} py="12" mb={10}>
+    <Box bg="green.400" borderRadius={10} py="12" mb={10}>
       <Container maxW="container.xl">
         <Box textAlign="center" mb="10">
-          <Heading as="h2" size="xl" color="headingColor" mb="4">
+          <Heading as="h2" size="xl" color="white" mb="4">
             Explore Our Adventures
           </Heading>
-          <Text fontSize="lg" color="gray.600">
+          <Text fontSize="lg" color="white">
             Discover a variety of adventure types that cater to all kinds of travelers. Whether you're looking for group camaraderie, private exploration, or a personalized journey, find the perfect adventure that awaits you.
           </Text>
         </Box>
