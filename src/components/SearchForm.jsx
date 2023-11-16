@@ -35,7 +35,7 @@ const SearchForm = () => {
         spacing={4}
         bg={bgColor}
         borderRadius="md"
-        boxShadow="xl"
+        boxShadow="2xl"
         p={4}
         width={{ base: "auto", md: "90%", lg: "80%" }}
         maxWidth="1200px"
@@ -62,7 +62,7 @@ const SearchForm = () => {
             showDisabledMonthNavigation
           />
         </InputGroup>
-        <Button colorScheme="red" px="8">
+        <Button colorScheme="green" px="8">
           Search
         </Button>
       </Stack>

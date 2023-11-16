@@ -1,4 +1,3 @@
-import React from 'react';
 import { Flex, Box, IconButton, Button, Image, useDisclosure } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import NavBar from './NavBar';
@@ -7,19 +6,22 @@ import MobileNav from './MobileNav';
 const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
 
+
   return (
     <Flex
       as="header"
       align="center"
       justify={{ base: 'space-between', md: 'space-around' }}
       wrap="wrap"
-      padding="1rem"
+      px={"1rem"}
       bg="white"
       color="black"
+      h={"80px"}
+      mb={"1rem"}
     >
       {/* Logo Section - Always Visible */}
-      <Box flex={{ base: '1', md: '0 0 20%' }} justifyContent={{ base: 'flex-start', md: 'center' }}>
-        <Image src="/logo.png" alt="Logo" w={{ base: '40%', md: '60%' }} />
+      <Box zIndex={5} flex={{ base: '1', md: '0 0 20%' }} justifyContent={{ base: 'flex-start', md: 'center' }}>
+        <Image src="/logo.png" alt="Logo" w={{ base: '40%', md: '220px' }} borderRadius={10}  />
       </Box>
 
       {/* Navigation Menu - Visible on Desktop */}
@@ -28,8 +30,8 @@ const Header = () => {
       </Box>
 
       {/* Buttons Section - Visible on Desktop */}
-      <Box flex={{ base: 'none', md: '0 0 20%' }} textAlign="right" display={{ base: 'none', md: 'block' }}>
-        <Button colorScheme='red' mr={4}>
+      <Box flex={{ base: 'none', md: '0 0 20%' }} textAlign="right" display={{ base: 'none', md: 'block' }} >
+        <Button colorScheme='green' mr={5}>
           Sign In
         </Button>
         <Button colorScheme='red' variant={"outline"}>

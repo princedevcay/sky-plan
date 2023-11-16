@@ -107,9 +107,9 @@ const TopDealCard = ({ deal }) => {
         <RatingStars rating={deal.rating} />
         <Text fontWeight="bold">{deal.title}</Text>
         <Stack direction="row" align="center">
-          <Icon as={FaCalendarAlt} />
+          <Icon as={FaCalendarAlt} color={"green"} />
           <Text>{deal.days} days</Text>
-          <Icon as={FaMapMarkerAlt} />
+          <Icon as={FaMapMarkerAlt} color={"green"} />
           <Text>{deal.location}</Text>
         </Stack>
         <Text noOfLines={2} textAlign="center">{deal.description}</Text>
@@ -120,10 +120,10 @@ const TopDealCard = ({ deal }) => {
         </Stack>
         <Grid templateColumns="repeat(2, 1fr)" gap={2} w="full">
           <GridItem>
-            <Button colorScheme="red" variant="outline" w="full">Quick Quote</Button>
+            <Button colorScheme="green" variant="outline" w="full">Quick Quote</Button>
           </GridItem>
           <GridItem>
-            <Button colorScheme="red" w="full">View Tour</Button>
+            <Button colorScheme="green" w="full">View Tour</Button>
           </GridItem>
         </Grid>
       </Stack>
